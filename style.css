@@ -1,0 +1,755 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------------------
+     ---------------->  Home Section and Contact section navs
+---------------------------------------------------------------------------------------- */
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+/* -------------------------- Navigation Bar --------------------------- */
+
+.nav-cont{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-cont .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-cont .links{
+    display: flex;
+    gap: 2rem;   
+}
+
+.nav-cont .toggle-btn{
+    font-size: 1.3rem;
+    color: #fffdfd;
+    cursor: pointer;
+    display: none;
+}
+
+.nav-cont li{
+    list-style: none;
+}
+
+.nav-cont a{
+    text-decoration: none;
+    color: #fffdfd;
+    font-size: 1.3rem;
+}
+
+.nav-cont ul li a:hover{
+    color: orange;
+}
+
+/* --------------------------------------------------------------------- */
+/* --------------------------- Dropdown Menu --------------------------- */
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 140px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open{
+    height: 190px;
+}
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+}
+
+.dropdown-menu a{
+    text-decoration: none;
+    color: #fffdfd;
+    font-size: 1.1rem;
+}
+
+/* -------------------------------------------------------------------- */
+/* -------------------------Responsive nav bar------------------------- */
+
+@media (max-width: 992px) {
+    .nav-cont .links{
+        display: none;
+    }
+
+    .nav-cont .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-menu{
+        left:2rem;
+        width: unset;
+    }
+}
+
+
+
+
+
+/* -------------------------------------------------------------------------------------
+     ---------------->  #Home Section
+---------------------------------------------------------------------------------------- */
+.main{
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ----------------------Layer Of Background Image---------------------- */
+.home-container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url('https://i.redd.it/c3uhsgo1vx541.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.home-container::after{
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(9px);
+}
+
+/* ---------------------------------------------------------------------- */
+/* ----------------------Layer On Background Image---------------------- */
+.home-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* -------------------------Responsive Background------------------------ */
+@media (min-width: 1024px) {
+    main::before {
+      background-attachment: fixed;
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------- Toggle Button --------------------------- */
+.space{
+    display: flex;
+    width: 100%;
+    height: 29px;
+    justify-content: flex-end;
+}
+
+.toggle-btn{
+    padding: 5px 7px;
+    display: none;
+    font-size: 21px;
+    cursor: pointer;
+    
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------- Dropdown Menu ---------------------------- */
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    height: 0;
+    width: 340px;
+    background: rgba(255,255,255,.2);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu li a{
+    text-decoration: none;
+    color: rgb(237, 239, 237);
+    
+}
+
+/* ---------------------------------------------------------------------- */
+/* --------------------------- Header Section --------------------------- */
+.header{
+    margin-top: 15%;
+    margin-left: -24%;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ----------------------------- Detailing ----------------------------- */
+.data{
+    align-items: center;
+    color: azure;
+    font-family: cursive;
+}
+
+h1{
+    font-size: 60px;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.p1{
+    padding-top: 5px;
+    font-size: 23px;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(240, 240, 243), 0 0 5px rgb(84, 84, 87);
+}
+
+.data p span{
+    color: rgb(5, 5, 5);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(96, 96, 107);
+}
+
+/* ---------------------------------------------------------------------- */
+/* ----------------------- Home Navigation Menu ------------------------ */
+.nav{
+    padding-top: 15px;
+    font-size: 23px;
+    margin-left: -4%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.nav ul li{
+    display: inline-block;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 10px 20px;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    color: rgb(237, 239, 237);
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(204, 55, 55), 0 0 5px rgb(238, 3, 3);
+}
+
+.nav ul li a:hover{
+    color: rgb(81, 252, 98);
+}
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------------- Social Icons --------------------------- */
+.icons{
+    float: left;
+    margin-top: 7px;
+    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 25px rgb(254, 254, 254), 0 0 5px
+}
+
+.icons a{
+    font-size: 21px;
+    color: rgb(3, 9, 16);
+    margin-right: 15px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* -------------------------- Responsive header ------------------------- */
+
+@media (max-width: 1024px) {
+    .header{
+        margin-top: 25%;
+    }
+    
+    .nav{
+        display: none;
+    }
+    
+    .icons{
+        padding-top: 18px;
+    }
+
+    .toggle-btn{
+        display: block;
+    }
+
+    .dropdown-menu{
+        display: block;
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+/* ------------------------- Mobile Response ------------------------- */
+@media (max-width: 420px) {
+
+    .header{
+        margin: 50% 1px
+    }
+    h1{
+        font-size: 41px;
+    }
+    .p1{
+        padding-top: 5px;
+        font-size: 20px;
+    }
+}
+/* ----------------------- Home Section Ended ------------------------ */
+
+
+
+
+
+/* -------------------------------------------------------------------------------------
+     ---------------->  #About Section
+---------------------------------------------------------------------------------------- */
+
+.about-body{
+    overflow: scroll;
+    overflow-y: scroll;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ----------------------Layer Of Background Image---------------------- */
+.about-container{
+    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to right, #5ceedf,#edeac5); 
+    background-image: url('https://img.freepik.com/free-vector/black-background-with-white-line-that-says-white-it_483537-4189.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about-container::after{
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 108%;
+    background: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(3px);
+}
+
+/* --------------------------------------------------------------------- */
+/* ----------------------Layer On Background Image---------------------- */
+.about-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ---------------------------------------------------------------- */
+/* ----------------------------- Line ----------------------------- */
+.line{
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #fff;
+}
+
+/* ------------------------------------------------------------------- */
+/* -------------------------- About My Self -------------------------- */
+
+.my-home{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.side-left img{
+    display: flex;
+    height: 369px;
+    width: 369px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px #fffefe8c;
+    border-radius: 100%;
+}
+
+.side-right{
+    background-color: black;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 2px solid rgb(6, 6, 6);
+    box-shadow: 0px 0px 30px #fffefe8c;
+}
+
+.side-right .p-two{
+    display: none;
+}
+
+.side-right h3{
+    color: #fff;
+    font-size: 21px;
+    padding-bottom: 18px;
+}
+
+.side-right p{
+    color: #fff;
+    font-size: 20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* --------------------------- Page Response ------------------------- */
+
+@media (max-width:1024px) {
+
+    .about-body{
+        height: 200px;
+        overflow: auto;
+        width: 100%;
+        height: 100%;   
+    }
+
+    .my-home{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100%;
+    }
+    .side-left img{
+        display: flex;
+        height: 280px;
+        width: 280px;
+        box-shadow: 7px 7px 30px #9e9c9c8c;
+        border-radius: 7%;
+        margin-top: -21%;
+    }
+    
+    .side-right .para{
+        display: none;
+    }
+
+    .side-right{
+        border:none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    .side-right .p-two{
+        display: block;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 440px;
+        height: 300px;
+        text-align:justify;
+    }
+}
+
+/* ----- Mobile Response ----- */
+@media (max-width:420px) {
+    .about-body{
+        background-color: black;
+    }
+
+    .about-container{
+        background-image: none;
+    }
+
+    .my-home{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-left img{
+        display: flex;
+        height: 269px;
+        width: 269px;
+        margin: 14% 20px;
+    }
+
+    .side-right{
+        margin: 0 21px;
+        margin-top: 7%;
+    }
+
+    .side-right .p-two{
+        width: 360px;
+        height: 400px;
+    }
+
+}
+/* ----------------------- About Section Ended ------------------------ */
+
+
+
+
+/* -------------------------------------------------------------------------------------
+     ---------------->  #Contact Section
+---------------------------------------------------------------------------------------- */
+
+.cont-body{
+    overflow: scroll;
+    overflow-y: scroll;
+}
+
+/* --------------------------------------------------------------------- */
+/* ----------------------Layer Of Background Image---------------------- */
+.contact-contaner{
+    height: 100vh;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( to right, #5ceedf,#edeac5);
+    background-image: url('https://st4.depositphotos.com/21389766/23112/i/450/depositphotos_231122574-stock-photo-contact-contact-write-email-support.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.contact-contaner::after{
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 108%;
+    background: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+/* --------------------------------------------------------------------- */
+/* ----------------------Layer On Background Image---------------------- */
+.contact-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* --------------------------------------------------------------------- */
+/* -----------------------------  Line  ------------------------------- */
+.hr1{
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: #de8080;
+}
+
+/* --------------------------------------------------------------------- */
+/* ------------------------- Contact Container ------------------------- */
+.contact-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* --------------------------------------------------------------------- */
+/* ----------------------- Contact Me Container ------------------------ */
+.contact-left{
+    color: #fff;
+    border: 2px solid rgb(255, 255, 255);
+    align-items: start;
+    border: 1px solid #fdfdfd75;
+    padding: 35px 50px;
+    border-radius: 3%;
+}
+
+.contact-left hr{
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+}
+
+.contact-left h2{
+    font-weight: 600;
+    color: #00ffbb;
+    font-size: 40px;
+    padding-bottom: 5px;
+    text-shadow: 0 0 5px #050505;
+}
+
+.contact-left li{
+    list-style: none;
+}
+
+.contact-left h4{
+    font-size: 20px;
+    font-weight: 100;
+    color: #b3e451;
+}
+
+.contact-left p{
+    font-size: 18px;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+/* --------------------------------------------------------------------- */
+/* ---------------------- Get In Touch Container ----------------------- */
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    border: 1px solid #fdfdfd38;
+    padding: 45px 60px;
+    background: rgba(41, 41, 41, 0.445);
+    border-radius: 2%;
+    box-shadow: 16px 14px 20px #0000008c;
+}
+
+.contact-right h2{
+    font-weight: 600;
+    color: #ffd500;
+    font-size: 40px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px #050505;
+}
+
+.contact-right hr{
+    border: 2px;
+    width: 120px;
+    height: 5px;
+    background-color: #ffd500; /*#a363aa*/
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 60px;
+}
+
+/* -------------------------- text Box ----------------------- */
+.contact-right textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+/* --------------Border line for text boxes------------------ */
+.contact-inputs:focus{
+    border: 2px solid #000000;
+}
+
+.contact-right::placeholder{
+    color: lightgray;
+}
+
+/* ------------------- Submit Button ------------------------ */
+.contact-right button{
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    background:linear-gradient(rgb(201, 102, 31),#d29a20); /*#ff994f,#fa6d86*/
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------- */
+/* ---------------------- Response customisation ---------------------- */
+
+@media (max-width:899px) {
+
+    .cont-body{
+        height: 200px;
+        overflow: auto;
+        width: 100%;
+        height: 100%; 
+    }
+
+    .contact-left{
+        padding: 70px 40px;
+    }
+
+    .contact-right{
+        padding: 60px 50px;
+    }
+    
+}
+
+@media (max-width:425px) {
+
+    .cont-body{
+        height: 120vh;
+        background: linear-gradient(rgb(0, 0, 0), rgb(79, 79, 197));
+    }
+
+    .contact-container{
+        align-items: center;
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contact-left{
+        padding: 40px 40px;
+        border: none;
+    }
+
+    .contact-right{
+        padding: 23px 45px;
+        border-radius: 21px;
+        border: 1px solid white;
+        background: rgba(0, 0, 0, 0.701);
+    }
+    
+    .contact-right h2{
+        font-weight:300;
+        color: #ffd500;
+        font-size: 40px;
+    }
+    
+    .contact-right hr{
+        border: 2px;
+        width: 100px;
+        height: 4px;
+    }
+    
+    .contact-inputs{
+        width: 289px;
+        height: 40px;;
+        font-weight: 300;
+    }
+    
+    .contact-right textarea{
+        height: 100px;
+    }
+    
+    .contact-inputs:focus{
+        border: 2px solid orange;
+    }
+    
+    .contact-right button{
+        background:linear-gradient(rgb(233, 143, 78),#dcbb76); /*#ff994f,#fa6d86*/
+        cursor: pointer;
+    }
+}

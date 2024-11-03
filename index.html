@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Protfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body class="main">
+    <div class="home-container">
+        <div class="home-wrapper">
+            <div class="space">
+                <div class="toggle-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                
+                <div class="dropdown-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a href="contact.html">Contact-us</a></li>
+                </div>
+            </div>
+            
+            <header class="header">
+                <div class="data">
+                    <h1>
+                        K Sumanth Reddy
+                    </h1>
+                    <p class="p1">
+                        Wellcome To <span> My Personal Protfolio... </span>
+                    </p>
+                </div>
+
+                <nav class="nav">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact-us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="icons">
+                    <a href="https://www.instagram.com/sumanthreddy_____21/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sumanthreddy.karri/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/Sumanth-reddy-407b672a6">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/sumanthreddy217">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="mailto:sumanthredy.k861@gmail.com">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                </div>
+            </header>
+
+            <script>
+                const toggleBtn = document.querySelector('.toggle-btn')
+                const toggleBtnIcon = document.querySelector('.toggle-btn i')
+                const dropDownMenu = document.querySelector('.dropdown-menu')
+        
+                toggleBtn.onclick = function (){
+                    dropDownMenu.classList.toggle('open')
+                    const isOpen = dropDownMenu.classList.contains('open')
+        
+                    toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

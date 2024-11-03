@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body class="cont-body">
+    <div class="contact-contaner">
+        <div class="contact-wrapper">
+            <header>
+                <div class="nav-cont">
+                    <div class="logo"><a href="index.html">Sumanth Reddy</a></div>
+
+                    <ul class="links">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="contact.html">Contact-Me</a></li>
+                    </ul>
+
+                    <div class="toggle-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+
+                <!-- mobile navigation -->
+                <div class="dropdown-menu">
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="contact.html">Contact-Me</a></li>
+                </div>
+            </header>
+
+            <hr class="hr1">
+
+            <div class="contact-container box">
+                
+                <div class="contact-left">
+                    <h2>Contact Me</h2>
+                    <hr>
+                    <li><h4>Address </h4>
+                        <p> West Godavari, <br> Andhrapradesh-534338</p>
+                    </li>
+                    <li><h4>Phone </h4>
+                        <p> +91 *******377 </p>
+                    </li>
+                    <li><h4>G-mail </h4>
+                        <p>sumanthreddy.k861@gmail.com</p>
+                    </li>
+                </div>
+
+                <!-- the action link from "w3forms" in google -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-right">
+
+                    <div class="contact-right-title">
+                        <h2>Get In Touch</h2>
+                        <hr>
+                    </div>
+                    <input type="hidden" name="access_key" value="1dc0013e-5b1b-45b9-945d-10163984be39"> 
+                    <!--the above input line also from same website w3forms-->
+                    <input type="text" id="name" placeholder="Your Name" class="contact-inputs" required>
+                    <input type="email" id="email" placeholder="Your Email" class="contact-inputs" required>
+                    <textarea name="Message" placeholder="Enter Your Message Here..." class="contact-inputs" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- This script for the dropdown menu -->
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function (){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
